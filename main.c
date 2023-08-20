@@ -1,10 +1,20 @@
+//  =========================================================================
+//  main.c
+//  -------------------------------------------------------------------------
 //  Minimalist Blinky with only CMSIS (no HAL)
-//  Target: STM32F030F4xx
-//  Mike Shegedin, 04/2023
-//
+//  -------------------------------------------------------------------------
+//  https://github.com/EZdenki/STM32F030-CMSIS-Blinky
+//  Released under the MIT License
+//  Copyright (c) 2023
+//  Mike Shegedin, EZdenki.com
+//  Version 1.0   Jul 2023    Started
+//  -------------------------------------------------------------------------
+//  Target Microcontroller and Devices:
+//    STM32F030Fxxx
+//  -------------------------------------------------------------------------
 //  Hardware Setup:
-//  Wire an LED and 1k resistor between pin 1 and ground.
-//  Connect the four pins from the ST-Link V2 as shown below:
+//    Wire an LED and 1k resistor between pin 1 and ground.
+//    Connect the four pins from the ST-Link V2 as shown below:
 //
 //                                        STM32F030F4xx               
 //                                         ____  ____
@@ -19,7 +29,7 @@
 //                                        |9       13|
 //                                        |10      11|
 //                                        ------------
-//          
+//  =========================================================================
 
 #include "stm32f030x6.h"
 
