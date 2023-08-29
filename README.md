@@ -8,12 +8,12 @@ directory can be used as-is as a template for new projects. All that needs to be
 ```
                                                             ST-Link V2 
                                     STM32F030F4xx           ╭───────╮     
-                                     ╭────╮╭────╮           |    GND├───────╮
-                               BOOT0 │1       20│ SWCLK ────┤SWCLK  |       |
-                                 PF0 │2       19│ SWCLK ────┤SWDIO  |       |
-                                 PF1 │3       18│ PA10      |   3.3V├───╮   |
-                                NRST │4       17│ PA9       ╰───────╯   |   |
-                                VDDA │5       16│ VCC ──────── VCC ─────╯   |
+                                     ╭────╮╭────╮           │    GND├───────╮
+                               BOOT0 │1       20│ SWCLK ────┤SWCLK  |       │
+                                 PF0 │2       19│ SWCLK ────┤SWDIO  |       │
+                                 PF1 │3       18│ PA10      │   3.3V├───╮   │
+                                NRST │4       17│ PA9       ╰───────╯   │   │
+                                VDDA │5       16│ VCC ──────── VCC ─────╯   │
     GND ─── [1K] ─── [-LED+] ─── PA0 │6       15│ GND ──────── GND ─────────╯
                                  PA1 │7       14│ PB1
                                  PA2 │8       13│ PA7
