@@ -4,19 +4,21 @@ This project can be used as a sanity check to check the toolchain used to progra
 directory can be used as-is as a template for new projects. All that needs to be updated is main.c.
 ### Hardware Setup
 ```
-                                       STM32F030F4xx
-                                         ____  ____
-                                        |1   \/  20| --- SWCLK *
-                                        |2       19| --- SWDIO *
-                                        |3       18|
-                                        |4       17|
-                                        |5       16| --- VCC   * (3.3 V)
-  [GND]---[1k resistor]---[- LED +] --- |6       15| --- GND   *
-                                        |7       14|
-                                        |8       13|
-                                        |9       13|
-                                        |10      11|
-                                        ------------
-                                * ST-Link V2 Programming Dongle
-```
+    Wire an LED and 1k resistor between pin 6 and ground.
+    Connect the four pins from the ST-Link V2 as shown below:
 
+                                                        ST-Link V2 
+                                 STM32F030F4xx         .-------.     
+                                 .---. .---.           |   GND |-------.
+                           BOOT0 |1   V  20| SWCLK --- | SWCLK |       |
+                             PF0 |2      19| SWCLK --- | SWDIO |       |
+                             PF1 |3      18| PA10      |  3.3V |---.   |
+                            NRST |4      17| PA9       '-------'   |   |
+                            VDDA |5      16| VCC -------- VCC -----'   |
+    GND---[1K]---[-LED+] --- PA0 |6      15| GND -------- GND ---------'
+                             PA1 |7      14| PB1
+                             PA2 |8      13| PA7
+                             PA3 |9      13| PA6
+                             PA4 |10     11| PA5
+                                 '---------'
+```
